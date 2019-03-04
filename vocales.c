@@ -2,6 +2,8 @@
 en una cadena y luego imprima el total discriminado por vocales*/
 
 #include<stdio.h>
+#include<stdlib.h>
+
 int vocalA(char *);
 int vocalE(char *);
 int vocalI(char *);
@@ -9,20 +11,19 @@ int vocalO(char *);
 int vocalU(char *);
 
 int main(){
-	char palabra[50];
+	char vocales[50];
 	
-	printf("Digite una palabra: ");
-	gets(palabra);
+	printf("INGRESAR LA PALABRA: ");
+	gets(vocales);
 	
-	printf("\nLa vocal a aparece: %i veces",vocalA(palabra));
-	printf("\nLa vocal e aparece: %i veces",vocalE(palabra));
-	printf("\nLa vocal i aparece: %i veces",vocalI(palabra));
-	printf("\nLa vocal o aparece: %i veces",vocalO(palabra));
-	printf("\nLa vocal u aparece: %i veces",vocalU(palabra));
+	printf("\nLA VOCAL A APARECE : %i veces",vocalA(vocales));
+	printf("\nLA VOCAL E APARECE : %i veces",vocalE(vocales));
+	printf("\nLA VOCAL I APARECE : %i veces",vocalI(vocales));
+	printf("\nLA VOCAL O APARECE : %i veces",vocalO(vocales));
+	printf("\nLA VOCAL U APARECE : %i veces",vocalU(vocales));
 
 	return 0;
 }
-
 int vocalA(char *s){
 	int cont=0;
 	while(*s){
@@ -33,7 +34,6 @@ int vocalA(char *s){
 	}
 	return cont;
 }
-
 int vocalE(char *s){
 	int cont=0;
 	while(*s){
@@ -44,7 +44,6 @@ int vocalE(char *s){
 	}
 	return cont;
 }
-
 int vocalI(char *s){
 	int cont=0;
 	while(*s){
@@ -55,7 +54,6 @@ int vocalI(char *s){
 	}
 	return cont;
 }
-
 int vocalO(char *s){
 	int cont=0;
 	while(*s){
@@ -66,7 +64,6 @@ int vocalO(char *s){
 	}
 	return cont;
 }
-
 int vocalU(char *s){
 	int cont=0;
 	while(*s){
